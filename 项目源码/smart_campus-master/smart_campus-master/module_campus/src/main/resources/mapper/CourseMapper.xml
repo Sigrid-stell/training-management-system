@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.atguigu.campus.mapper.CourseMapper">
+
+    <resultMap id="BaseResultMap" type="com.atguigu.campus.pojo.Course">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="coursename" column="course" jdbcType="VARCHAR"/>
+            <result property="teacher" column="teacher" jdbcType="VARCHAR"/>
+            <result property="begintime" column="begintime" jdbcType="DATE"/>
+            <result property="place" column="place" jdbcType="VARCHAR"/>
+            <result property="endtime" column="endtime" jdbcType="DATE"/>
+            <result property="intro" column="intro" jdbcType="VARCHAR"/>
+            <result property="numofapplications" column="numofapplications" jdbcType="INTEGER"/><!--限制人数-->
+            <result property="numofregistered" column="numofregistered" jdbcType="INTEGER"/><!--报名人数-->
+            <result property="status" column="status" typeHandler="org.apache.ibatis.type.EnumTypeHandler"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,coursename, teacher,
+        begintime, place, endtime,
+        intro, numofapplications, numofregistered, status
+    </sql>
+</mapper>
+

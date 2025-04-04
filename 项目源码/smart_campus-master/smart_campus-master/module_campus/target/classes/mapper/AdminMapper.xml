@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><!--版本及编码-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.campus.mapper.AdminMapper"><!--命名空间-->
+
+    <resultMap id="BaseResultMap" type="com.atguigu.campus.pojo.Admin"><!--id为唯一表示符-->
+            <id property="id" column="id" jdbcType="INTEGER"/><!--id-->
+            <result property="name" column="name" jdbcType="VARCHAR"/><!--用户名-->
+            <result property="gender" column="gender" jdbcType="CHAR"/><!--性别-->
+            <result property="password" column="password" jdbcType="VARCHAR"/><!--密码-->
+            <result property="email" column="email" jdbcType="VARCHAR"/><!--邮箱-->
+            <result property="telephone" column="telephone" jdbcType="VARCHAR"/><!--手机号-->
+            <result property="address" column="address" jdbcType="VARCHAR"/><!--地址-->
+            <result property="portraitPath" column="portrait_path" jdbcType="VARCHAR"/><!--头像路径-->
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,gender,
+        password,email,telephone,
+        address,portrait_path
+    </sql>
+</mapper>
